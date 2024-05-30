@@ -1,9 +1,10 @@
-import Title from './components/title.js'
-import Image from './components/image.js'
-import Button from './components/button.js'
-import warning from './templates/warning.html'
-import './styles/style.css'
-import fraseTxt from './files/frase.txt'
+import Title from './components/title.js';
+import Image from './components/image.js';
+import Button from './components/button.js';
+import warning from './templates/warning.html';
+import './styles/style.css';
+import fraseTxt from './files/frase.txt';
+// import descricao from './files/descricao.json';
 
 
 const title = new Title();
@@ -33,3 +34,6 @@ const frase = fraseTxt;
 
 console.log(frase);
 console.log(frase.toUpperCase());
+
+const pessoa = descricao;
+console.log(pessoa);
