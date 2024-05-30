@@ -4,6 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const DotenvPlugin = require('dotenv-webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports  = {
   entry: './src/index.js',
@@ -25,6 +26,7 @@ module.exports  = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
@@ -33,6 +35,7 @@ module.exports  = {
       PORT: JSON.stringify('8080')
     }),
     new DotenvPlugin(),
-    new HTMLWebpackPlugin()
+    new HTMLWebpackPlugin(),
+
   ]
 }
