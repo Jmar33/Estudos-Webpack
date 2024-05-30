@@ -1,5 +1,5 @@
 const path = require('path');
-const { entry, output } = require('../2_LOADERS/webpack.config');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,7 +7,10 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  mode: 'production'
+  mode: 'development',
+  plugins: [
+    new TerserPlugin()
+  ]
 
 
 }
