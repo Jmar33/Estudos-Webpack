@@ -2,7 +2,9 @@ import Title from './components/title.js'
 import Image from './components/image.js'
 import Button from './components/button.js'
 import warning from './templates/warning.html'
-import style from './styles/style.css'
+import './styles/style.css'
+import fraseTxt from './files/frase.txt'
+
 
 const title = new Title();
 
@@ -26,3 +28,8 @@ console.log(teste);
 
 const body = document.querySelector('body');
 body.innerHTML += warning;
+
+const frase = fraseTxt;
+
+console.log(frase);
+console.log(frase.toUpperCase());
