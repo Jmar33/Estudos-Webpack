@@ -1,7 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-const { devServer } = require('../../../11_RECURSOS_WEBPACK/webpack.config');
 
 module.exports = {
   entry: './src/index.js',
@@ -10,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: 'http://localhost:9001/'
   },
+  mode: 'development',
   devServer: {
     historyApiFallback: true,
     port: 9001
