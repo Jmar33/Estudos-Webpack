@@ -11,7 +11,7 @@ module.exports = {
     publicPath: 'http://localhost:9001/'
   },
   devServer: {
-    historyFallbackApi: true,
+    historyApiFallback: true,
     port: 9001
   }, 
   resolve: {
@@ -21,9 +21,11 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: require.resolve('babel-loader'),
-        options: {
-          presets: [require.resolve('@babel/preset-react')]
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            presets: [require.resolve('@babel/preset-react')]
+          }
         }
       },
       {
