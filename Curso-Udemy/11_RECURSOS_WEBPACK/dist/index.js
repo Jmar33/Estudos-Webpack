@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _msg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./msg */ \"./src/msg.js\");\n/* provided dependency */ var _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n\n\n//Shiming\n//Com o shiming deixamos como responsabilidade do webpack definir quem são nossas variáveis globais\nconsole.log(_.difference([1, 2, 3], [4, 5]));\nconsole.log(_.lastIndexOf([1, 2, 3], 2));\nif (false) {}\n\n//# sourceURL=webpack://11_recursos_webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _msg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./msg */ \"./src/msg.js\");\n/* provided dependency */ var _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n\n\n//Shiming\n//Com o shiming deixamos como responsabilidade do webpack definir quem são nossas variáveis globais\nconsole.log(_.difference([1, 2, 3], [4, 5]));\nconsole.log(_.lastIndexOf([1, 2, 3], 3));\nif (false) {}\nfunction createButton() {\n  const btn = document.createElement('button');\n  btn.innerText = \"Clique aqui!\";\n  document.querySelector('body').appendChild(btn);\n  btn.onclick = e => __webpack_require__.e(/*! import() */ \"src_lazy_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./lazy */ \"./src/lazy.js\")).then(module => {\n    const lazy = module.default;\n    lazy();\n  });\n}\ncreateButton();\n\n//# sourceURL=webpack://11_recursos_webpack/./src/index.js?");
 
 /***/ }),
 
